@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TontiGN - Ma tontine, ma confiance</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f6f3;
+      margin: 0;
+      padding: 20px;
+      color: #173c2b;
+    }
+    .container {
+      max-width: 500px;
+      margin: 30px auto;
+      background: white;
+      padding: 24px;
+      border-radius: 16px;
+      box-shadow: 0 3px 12px #0001;
+    }
+    h1 { color: #087443; text-align: center; }
+    p { line-height: 1.6; }
+    label { display: block; margin-top: 15px; }
+    input, button {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 12px;
+      margin-top: 8px;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    input { border: 1px solid #bbb; }
+    button {
+      background: #087443;
+      color: white;
+      border: none;
+      font-weight: bold;
+    }
+    .note { font-size: 13px; color: #666; }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h1>Bienvenue sur TontiGN</h1>
+    <p>La tontine numérique au service de la confiance et de la solidarité en Guinée.</p>
+
+    <h2>Préparer mon inscription</h2>
+    <form id="inscription">
+      <label for="nom">Nom complet</label>
+      <input id="nom" type="text" placeholder="Votre nom" required>
+
+      <label for="telephone">Numéro de téléphone</label>
+      <input id="telephone" type="tel" placeholder="Ex. 6XXXXXXXX" required>
+
+      <button type="submit">Préparer mon inscription</button>
+    </form>
+    <p id="message" role="status"></p>
+    <p class="note">Version de démonstration : aucune donnée n'est envoyée ni enregistrée.</p>
+  </main>
+  <script>
+    document.getElementById("inscription").addEventListener("submit", function(event) {
+      event.preventDefault();
+      document.getElementById("message").textContent =
+        "Bienvenue ! L'inscription réelle sera disponible après la mise en place du système sécurisé.";
+    });
+  </script>
+</body>
+</html>
